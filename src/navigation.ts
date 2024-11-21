@@ -3,24 +3,29 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Main',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Campaigns',
+          href: getPermalink('/main/saas'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'History',
+          href: getPermalink('/main/startup'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'Transparency',
+          href: getPermalink('/main/mobile-app'),
         },
+      ],
+    },
+    {
+      text: 'Nawroz School',
+      links: [
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+          text: 'Dates',
+          href: getPermalink('/main/mobile-app'),
+        }
       ],
     },
     {
@@ -33,7 +38,7 @@ export const headerData = {
       ],
     }
   ],
-  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Donate', href: '#', target: '_blank' }],
 };
 
 export const footerData = {

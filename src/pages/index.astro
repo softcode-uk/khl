@@ -4,7 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
@@ -21,14 +21,16 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Donate now',
+        href: '#',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:heart',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Learn more',
+        icon: 'tabler:info-square',
+        href: '#features' },
     ]}
-    image={{ src: '~/assets/images/default.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: 'https://images.ctfassets.net/pjshm78m9jt4/4RKqUDTeStIVA8LnhAdpS1/317f38e6c261a3124ed285e2b28d4cd1/IMG_3300_2.jpg?fm=avif&fit=fill&w=720&h=405&q=80', alt: 'KHL new home opening - image from ITV' }}
   >
     <Fragment slot="title">
       Welcome to KHL
@@ -39,6 +41,24 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <!-- CallToAction Widget ************ -->
+
+  <CallToAction
+    title="The largest fund raising effort by a Kurdish Community in Yorkshire"
+    subtitle="We need to raise over £400,000 to secure the future of the Kurdish Community Centre in Leeds."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Donate now',
+        href: '#',
+      },
+      {
+        variant: 'secondary',
+        text: 'Learn more',
+        href: '/about',
+      },
+    ]}
+
   <!-- Note Widget ******************* -->
 
   <Note />
@@ -47,59 +67,43 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    title="Quick Start"
+    subtitle="Learn more about Newroz School and the Kurdish Community Centre in Leeds."
     tagline="Components"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'History',
+        description: "KHL was established...",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Community',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          "Leeds is the home to a large Kurdish community...",
+        icon: 'flat-color-icons:conference-call',
       },
       {
-        title: 'Features',
+        title: 'Nawroz School',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+          'The School was opened in 2017...',
+        icon: 'flat-color-icons:organization',
       },
       {
-        title: 'Content',
+        title: 'Teaching',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+          "The school offers a range of classes...",
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
         title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        description: 'Our students and parents love the school...',
         icon: 'flat-color-icons:voice-presentation',
       },
       {
         title: 'Contact',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+          'Get in touch with us...',
         icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
       },
     ]}
   >

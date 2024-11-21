@@ -43,6 +43,10 @@ export default defineConfig({
           'voice-presentation',
           'business-contact',
           'database',
+          'reading',
+          'home',
+          'organization',
+          'conference-call'
         ],
       },
     }),
