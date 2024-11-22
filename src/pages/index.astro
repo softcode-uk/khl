@@ -7,6 +7,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import LanguagePicker from '../components/LanguagePicker.astro';
 
 const metadata = {
   title: 'Welcome to KHL',
@@ -22,7 +23,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Donate now',
-        href: '#donate',
+        href: '#',
         target: '_blank',
         icon: 'tabler:heart',
       },
@@ -58,16 +59,16 @@ const metadata = {
         href: '/about',
       },
     ]}
-
+    />
   <!-- Note Widget ******************* -->
 
-  <!-- Note -->
+  <Note />
 
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Quick Start"
+    title="Discover"
     subtitle="Learn more about Newroz School and the Kurdish Community Centre in Leeds."
     tagline="Components"
     items={[

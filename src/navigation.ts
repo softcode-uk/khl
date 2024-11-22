@@ -7,11 +7,11 @@ export const headerData = {
       links: [
         {
           text: 'Campaigns',
-          href: getPermalink('/main/saas'),
+          href: getPermalink('/main/campaigns'),
         },
         {
           text: 'History',
-          href: getPermalink('/main/startup'),
+          href: getPermalink('/main/history'),
         },
         {
           text: 'Transparency',
