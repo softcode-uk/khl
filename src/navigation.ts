@@ -15,7 +15,7 @@ export const headerData = {
         },
         {
           text: 'Transparency',
-          href: getPermalink('/main/mobile-app'),
+          href: getPermalink('/main/transparency'),
         },
       ],
     },
@@ -24,7 +24,7 @@ export const headerData = {
       links: [
         {
           text: 'Dates',
-          href: getPermalink('/main/mobile-app'),
+          href: getPermalink('/main/dates'),
         }
       ],
     },

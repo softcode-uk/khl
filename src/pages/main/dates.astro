@@ -1,0 +1,59 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+
+const metadata = {
+  title: 'School dates',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="School dates"
+    image={{
+      src: 'https://scontent-lhr6-2.xx.fbcdn.net/v/t39.30808-6/323047196_863698298295025_7601728056011587103_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=VEYlCxjBzGIQ7kNvgHsUEH7&_nc_zt=23&_nc_ht=scontent-lhr6-2.xx&_nc_gid=AovRNUKpYqNeKskIN2V6tj8&oh=00_AYD1gCBCukCcEqbUj2KKCNkyuY-Kia0vspc_OBdLjcd4cA&oe=67463492',
+      alt: 'Nawroz school image',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">2024</span>: <br /> School Dates <span
+        class="hidden xl:inline"> are here</span
+      >
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        School started...
+      </span>
+      Table to follow
+    </Fragment>
+
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href=''>
+      </Button>
+
+      <Button variant="link" href=''>
+        <Image src='' alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+  </Hero2>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="announcement"
+    title="We kindly ask parenets to ..."
+    subtitle="Please note that the school will be closed on the following dates:"
+  >
+
+  </CallToAction>
+</Layout>
