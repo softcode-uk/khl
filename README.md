@@ -2,9 +2,12 @@
 
 This is a static wesbite using Astro 4.0 and Tailwind CSS. The website is deployed to GitHub Pages using the `gh-pages` branch.
 
-### Deploy
+KHL is the community centre behind Nawroz School which is registered as a charity in the UK. The website is designed to provide information about the school and the community centre. Charity number: [1201524](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5203486).
 
-#### Deploy to production (manual)
+### Deploy
+For full documentations see Astrowind template at the forked repo above.
+
+#### Deploy to production
 
 You can create an optimized production build with:
 
@@ -12,9 +15,8 @@ You can create an optimized production build with:
 npm run build
 ```
 
-Now, your website is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
+Now, the website is ready to be deployed. All generated files are located at
+`dist` folder.
 
 #### GH pages
 
