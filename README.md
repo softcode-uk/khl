@@ -5,6 +5,7 @@ This is a static wesbite using Astro 4.0 and Tailwind CSS. The website is deploy
 KHL is the community centre behind Nawroz School which is registered as a charity in the UK. The website is designed to provide information about the school and the community centre. Charity number: [1201524](https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5203486).
 
 ### Deploy
+
 For full documentations see Astrowind template at the forked repo above.
 
 #### Deploy to production

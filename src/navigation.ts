@@ -55,7 +55,10 @@ export const footerData = {
       title: 'Charity',
       links: [
         { text: 'About', href: '#' },
-        { text: '1201524', href: 'https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5203486' }
+        {
+          text: '1201524',
+          href: 'https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5203486',
+        },
       ],
     },
     {
