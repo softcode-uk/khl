@@ -1,11 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-
 import Hero2 from '~/components/widgets/Hero2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-
-
 
 const metadata = {
   title: 'Transparency',
@@ -13,7 +10,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
@@ -25,34 +21,34 @@ const metadata = {
   >
     <Fragment slot="title">
       <span class="text-accent dark:text-white highlight">2024</span>: <br /> Transparency Report <span
-        class="hidden xl:inline"> are here</span
+        class="hidden xl:inline"
+      >
+        are here</span
       >
     </Fragment>
 
     <Fragment slot="subtitle">
-  <FAQs
-    title="Overall Figures"
-    items={[
-      {
-        title: 'Donation this year',
-        description:
-          'Outline all or some sources',
-      },
-      {
-        title: 'Total costs this year',
-        description:
-          'Costs this year in a paragraph',
-      },
-      {
-        title: 'School Expenditure',
-        description: `Some overall figures about the school expenditure`,
-      },
-      {
-        title: 'Add more boxes',
-        description:
-          'Below...',
-      },
-
-    ]}
-  />
-</Layout>
+      <FAQs
+        title="Overall Figures"
+        items={[
+          {
+            title: 'Donation this year',
+            description: 'Outline all or some sources',
+          },
+          {
+            title: 'Total costs this year',
+            description: 'Costs this year in a paragraph',
+          },
+          {
+            title: 'School Expenditure',
+            description: `Some overall figures about the school expenditure`,
+          },
+          {
+            title: 'Add more boxes',
+            description: 'Below...',
+          },
+        ]}
+      />
+    </Fragment>
+  </Hero2></Layout
+>

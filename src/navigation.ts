@@ -25,7 +25,7 @@ export const headerData = {
         {
           text: 'Dates',
           href: getPermalink('/main/dates'),
-        }
+        },
       ],
     },
     {
@@ -34,9 +34,9 @@ export const headerData = {
         {
           text: 'Blog List',
           href: getBlogPermalink(),
-        }
+        },
       ],
-    }
+    },
   ],
   actions: [{ text: 'Donate', href: '#', target: '_blank' }],
 };
@@ -53,21 +53,15 @@ export const footerData = {
     },
     {
       title: 'Charity',
-      links: [
-        { text: 'About', href: '#' },
-      ],
+      links: [{ text: 'About', href: '#' }],
     },
     {
       title: 'Environment',
-      links: [
-        { text: 'Efforts', href: 'environment' },
-      ],
+      links: [{ text: 'Efforts', href: 'environment' }],
     },
     {
       title: 'Where?',
-      links: [
-        { text: 'Former Golden Lion Pub', href: '#' },
-      ],
+      links: [{ text: 'Former Golden Lion Pub', href: '#' }],
     },
   ],
   secondaryLinks: [

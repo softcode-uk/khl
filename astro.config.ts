@@ -46,7 +46,7 @@ export default defineConfig({
           'reading',
           'home',
           'organization',
-          'conference-call'
+          'conference-call',
         ],
       },
     }),

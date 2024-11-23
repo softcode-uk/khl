@@ -1,10 +1,15 @@
 ---
 import { languages } from '../i18n/ui';
 ---
+
 <ul class="text-sm">
-  {Object.entries(languages).map(([lang, label]) => (
-    <li>
-      <a href={`/${lang}/`} title={label}>{lang}</a>
-    </li>
-  ))}
+  {
+    Object.entries(languages).map(([lang, label]) => (
+      <li>
+        <a href={`/${lang}/`} title={label}>
+          {lang}
+        </a>
+      </li>
+    ))
+  }
 </ul>
