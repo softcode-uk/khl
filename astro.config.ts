@@ -22,8 +22,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  site: 'https://softcode-uk.github.io',
-  base: '/khl/',
+  site: 'https://softcode-uk.github.io/khl',
+  base: '/khl',
   output: 'static',
 
   integrations: [
@@ -87,6 +87,7 @@ export default defineConfig({
   },
 
   vite: {
+    base: '/khl/',
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
