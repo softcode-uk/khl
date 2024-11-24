@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://khl.com/sitemap-index.xml
+Sitemap: https://softcode-uk.github.io/sitemap-index.xml
