@@ -1,6 +1,6 @@
 site:
   name: KHL
-  site: 'https://www.kurdishhouseleeds.org'
+  site: 'https://softcode-uk.github.io/khl'
   base: '/'
   trailingSlash: false
 
