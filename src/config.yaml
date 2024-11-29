@@ -1,7 +1,7 @@
 site:
   name: KHL
-  site: 'https://softcode-uk.github.io/khl'
-  base: '/khl'
+  site: 'https://www.kurdishhouseleeds.org'
+  base: '/'
   trailingSlash: false
 
   # googleSiteVerificationId:
