@@ -41,6 +41,7 @@ jobs:
       - run: npm run check
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: build
     steps:
