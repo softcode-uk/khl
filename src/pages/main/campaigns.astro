@@ -7,8 +7,10 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import { headerData } from '~/navigation';
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'KHL | Campaigns Page',
 };
+const totalAmount = 450000; // Replace with actual total goal
+const amountRaised = 16000; // Replace with actual amount raised
 ---
 
 <Layout metadata={metadata}>
@@ -29,8 +31,8 @@ const metadata = {
   <!-- Donation Widget ******************* -->
 
   <Pricing
-    title="Major Donations"
-    subtitle="Kurdish House in Leeds </br>Sort code 050090 </br>account 34977139 </br>Virgin Money Bank.</br>"
+    title="Send Donations to"
+    subtitle="Kurdish House in Leeds </br>Sort code 050090 </br>account 34977139 </br>Virgin Money Bank. </br> Use your name as reference."
     prices={[
       {
         title: 'Small',
@@ -69,4 +71,88 @@ const metadata = {
       },
     ]}
   />
+    <div class="flex items-center gap-2 mt-4">
+    Total raised: £{amountRaised} of £{totalAmount}
+    <input id="bin-slider" type="range" min="5" max="8000" step="5" />
+    <label id="bin-label">Donors: </label>
+  </div>
+
+  <div id="fundraising-visualization" class="grid"></div>
+
+  <script>
+    const totalAmount = 450000;
+    const amountRaised = 16000;
+
+    function updateVisualization(donors) {
+      const container = document.getElementById('fundraising-visualization');
+      const label = document.getElementById('bin-label');
+
+      if (!container || !label) {
+        console.error('Required elements not found in the DOM.');
+        return;
+      }
+
+      const maxColumns = 90;
+      const contributionPerDonor = totalAmount / donors;
+      const fullyCoveredDonors = Math.floor(amountRaised / contributionPerDonor);
+      const partialCoverage = (amountRaised % contributionPerDonor) / contributionPerDonor;
+
+      label.innerText = `Donors: ${donors} (£${(contributionPerDonor).toFixed(2)} each)`;
+
+      container.style.gridTemplateColumns = `repeat(${Math.min(donors, maxColumns)}, 1fr)`;
+      container.innerHTML = '';
+
+      for (let i = 0; i < donors; i++) {
+        const square = document.createElement('div');
+        square.className = 'border border-gray-300';
+
+        if (i < fullyCoveredDonors) {
+          square.style.backgroundColor = 'green';
+        } else if (i === fullyCoveredDonors) {
+          square.style.background = `linear-gradient(to top, green ${partialCoverage * 100}%, lightgray ${partialCoverage * 100}%)`;
+        } else {
+          square.style.backgroundColor = 'lightgray';
+        }
+
+        container.appendChild(square);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('bin-slider') as HTMLInputElement;
+      const initialBins = 400;
+
+      if (!slider) {
+        console.error('Slider not found in the DOM.');
+        return;
+      }
+
+      slider.value = initialBins.toString();
+
+      updateVisualization(initialBins);
+
+      slider.addEventListener('input', () => {
+        const donors = parseInt(slider.value, 10);
+        if (!isNaN(donors)) {
+          updateVisualization(donors);
+        }
+      });
+    });
+  </script>
+
+  <style>
+    #fundraising-visualization {
+      padding: 16px;
+      display: grid;
+      gap: 1px;
+      grid-auto-rows: 10px;
+      max-width: 100%;
+    }
+
+    #fundraising-visualization div {
+      width: 10px;
+      height: 10px;
+      transition: background 0.3s ease;
+    }
+  </style>
 </Layout>
